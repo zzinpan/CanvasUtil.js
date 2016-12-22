@@ -42,3 +42,7 @@ CanvasUtil.scaleUp();
 CanvasUtil.scaleDown();
 ```
 
+####Sample
+https://zzinpan.github.io/CanvasUtil.js/sample/main.html
+
+
