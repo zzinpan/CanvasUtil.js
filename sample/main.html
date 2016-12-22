@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+body	{padding: 0; margin: 0;}
+canvas	{position: absolute; left: calc( 50% - 400px ); top: calc( 50% - 400px ); box-shadow: 1px 1px 0px #cccccc;}
+</style>
+<script type="text/javascript" src="../dist/CanvasUtil.js"></script>
+<script type="text/javascript">
+function onload(){
+	
+	
+	/****************************************************************
+	 * 1.캔버스 정의
+	 ****************************************************************/
+	var canvas	= document.getElementById("canvas");
+	CanvasUtil.setCanvas( canvas );
+	
+	
+	
+	/****************************************************************
+	 * 2.그리기
+	 ****************************************************************/
+	CanvasUtil.draw(function( canvas, ctx ){
+		ctx.clearRect(0,0, 800,800);
+		ctx.fillStyle = "red";
+		ctx.fillRect(50,50, 700,700);
+		ctx.fillStyle = "orange";
+		ctx.fillRect(100,100, 600,600);
+		ctx.fillStyle = "yellow";
+		ctx.fillRect(150,150, 500,500);
+		ctx.fillStyle = "green";
+		ctx.fillRect(200,200, 400,400);
+		ctx.fillStyle = "blue";
+		ctx.fillRect(250,250, 300,300);
+		ctx.fillStyle = "darkblue";
+		ctx.fillRect(300,300, 200,200);
+		ctx.fillStyle = "purple";
+		ctx.fillRect(350,350, 100,100);
+	});
+	
+	
+	
+	/****************************************************************
+	 * 3.이벤트 정의
+	 ****************************************************************/
+	var mouseDown	= false,
+		mouseX		= 0,
+		mouseY		= 0;
+	
+	
+	canvas.onmousedown = function(e){
+		mouseDown = true;
+		mouseX = e.pageX;
+		mouseY = e.pageY;
+	};
+	
+	canvas.onmouseup = function(e){
+		mouseDown = false;
+	};
+	
+	canvas.onmousemove = function(e){
+		if( !mouseDown ){
+			return;
+		}
+		var distX = e.pageX - mouseX,
+			distY = e.pageY - mouseY;
+		CanvasUtil.move( distX, distY );
+		mouseX = e.pageX;
+		mouseY = e.pageY;
+	};
+	
+	canvas.onmousewheel = function(e){
+		if( e.wheelDelta > 0 ){
+			CanvasUtil.scaleUp();
+		}else{
+			CanvasUtil.scaleDown();
+		}
+	};
+	
+	
+}
+</script>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="800"></canvas>
+</body>
+<script type="text/javascript">onload();</script>
+</html>
