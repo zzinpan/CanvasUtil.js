@@ -109,6 +109,14 @@
 			drawAll();
 		},
 		
+		//변형 초기화
+		initTransform: function(){
+			scale 	= 1;
+			x 		= 0;
+			y 		= 0;
+			drawAll();
+		},
+		
 		//이동
 		move: function( distX, distY ){
 			move( distX, distY );
