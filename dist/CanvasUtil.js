@@ -97,7 +97,7 @@
 		//사용자에게 현재 스케일 값 전달
 		getScale: getScale,
 		
-		//확드
+		//확대
 		scaleUp: function(){
 			scaleUp();
 			drawAll();
