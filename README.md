@@ -18,12 +18,20 @@ CanvasUtil.setCanvas( canvas );
 ```javascript
 CanvasUtil.draw(function( canvas, ctx ){
 	
-	//...
+	// 첫번째 함수는 transform(이동,확대,축소)을 적용합니다.
 	
 	ctx.fillRect( 0,0, 200,200 );
 	
 	//...
 	
+}, function( canvas, ctx ){
+
+	// 두번째 함수는 transform(이동,확대,축소)을 적용하지 않습니다.
+	
+	ctx.fillRect( 0,0, 200,200 );
+
+	//...
+
 });
 ```
 
@@ -41,11 +49,15 @@ CanvasUtil.scaleUp();
 ```javascript
 CanvasUtil.scaleDown();
 ```
+####7.ETC
+```javascript
+//현재 적용된 배율값을 전달합니다.
+CanvasUtil.getScale();
+```
 
-
-
+<br><br>
 ####Sample - https://zzinpan.github.io/CanvasUtil.js/sample/main.html
-
+<br><br>
 
 
 
