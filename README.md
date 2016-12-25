@@ -53,6 +53,9 @@ CanvasUtil.scaleDown();
 ```javascript
 //현재 적용된 배율값을 전달합니다.
 CanvasUtil.getScale();
+
+//적용되었던 transform을 초기화합니다.
+CanvasUtil.initTransform();
 ```
 
 <br><br>
