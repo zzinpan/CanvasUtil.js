@@ -89,8 +89,12 @@
 		
 		//사용자 그리기 함수 등록
 		draw: function( _userDrawFunc, _userDrawFuncNoTransform ){
-			userDrawFunc = _userDrawFunc;
-			userDrawFuncNoTransform = _userDrawFuncNoTransform;
+			if( typeof _userDrawFunc === "function" ){
+				userDrawFunc = _userDrawFunc;
+			}
+			if( typeof _userDrawFuncNoTransform === "function" ){
+				userDrawFuncNoTransform = _userDrawFuncNoTransform;
+			}
 			drawAll();
 		},
 		
