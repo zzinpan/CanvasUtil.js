@@ -3,13 +3,13 @@
 	/****************************************************************
 	 * 접근 제한 변수 
 	 ****************************************************************/
-	var canvas						= null,	//적용캔버스
-		ctx							= null,	//캔버스 컨텍스트
-		scale						= 1,	//확대 배율
-		x							= 0,	//그리는 시작점X
-		y							= 0,	//그리는 시작점Y
-		userDrawFunc				= null;	//사용자 변형적용 그리기 함수
-		userDrawFuncNoTransform		= null;	//사용자 변형미적용 그리기 함수
+	var canvas = null, // 적용캔버스
+		ctx = null,	 // 캔버스 컨텍스트
+		scale	= 1, // 확대 배율
+		x = 0, // 그리는 시작점X
+		y = 0, // 그리는 시작점Y
+		userDrawFunc = null; // 사용자 변형적용 그리기 함수
+		userDrawFuncNoTransform = null; // 사용자 변형미적용 그리기 함수
 	
 	
 	
